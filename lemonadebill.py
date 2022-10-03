@@ -13,16 +13,21 @@ def billcollector(amount):
     return False
 
 input = [5,5,5,10,15]
-print('***input 1***')
+output = []
 for amount in input:
-    print("amount %d:"%(amount))
-    print("cashinhand b %d"%(cashinhand))
-    print(billcollector(amount))
-    print("cashinhand a %d"%(cashinhand))
-print('***input 2***')
+    status = billcollector(amount)
+    output.append(status)
+
+print('input')
+print(input)
+print('output')
+print(output)
 input = [5,5,10,20,5]
+output =[]
 for amount in input:
-    print("amount %d:"%(amount))
-    print("cashinhand b %d"%(cashinhand))
-    print(billcollector(amount))
-    print("cashinhand a %d"%(cashinhand))
+    status = billcollector(amount)
+    output.append(status)
+print('input')
+print(input)
+print('output')
+print(output)
