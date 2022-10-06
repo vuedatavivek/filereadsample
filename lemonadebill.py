@@ -17,7 +17,7 @@ def billcollector(amount):
     balance = int(amount - price)
     available_coins = sorted(cashinhand.keys(), reverse=True)
     settled = False
-    if(cashinhand.get(balance) != None and cashinhand.get(balance) >= 0):
+    if(cashinhand.get(balance) != None and cashinhand.get(balance) > 0):
         cashinhand[balance] -= 1
         balance = 0
         settled = True
@@ -37,32 +37,39 @@ def billcollector(amount):
             cashinhand[amount] = 1
         else:
             cashinhand[amount] += 1
-    print(cashinhand)
-    print(total_balance)
     return balance == 0
 
-_input = [5,5,5,10,20]
-_input = [5,5,10,10,20]
-output = []
-for amount in _input:
-    status = billcollector(amount)
-    output.append(status)
+# _input = [5,5,5,10,20]
+# #_input = [5,5,10,10,20]
+# output = []
+# for amount in _input:
+#     status = billcollector(amount)
+#     if(status == False):
+#         break
+    
+# print(status)
+    
 #input = [5,10,5]
 
-cus_count = input("Enter no of customers")
-print(cus_count)
+n = input("Enter no of customers : ")
+print(n)
 output = []
-for i in cus_count:
-    cus_amount = input("Enter amount for cus")
+for i in range(int(n)):
+    #cus_amount = input("Enter amount for cus %d"%(i))
+    cus_amount = input("Enter amount for cus :")
+    #print("Total no of rows: %d"%(csvreader.line_num))
     status = billcollector(int(cus_amount))
-    output.append(status)
-print(output) 
+    print(status) 
+    if(status == False):
+        break
+    #output.append(status)
+#print(status) 
 # input = [5,5,10,20,5]
 # output =[]
 # for amount in input:
 #     status = billcollector(amount)
 #     output.append(status)
 # print('input')
-# print(input)
+#print(_input)
 # print('output')
-# print(output)
+#print(output)
