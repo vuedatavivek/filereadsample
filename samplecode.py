@@ -21,7 +21,7 @@ def fib_generator(limit):
 limit = int(input("Enter the limit\n"))
 for i in range(0, limit + 1):
     c = fib_generator(i)
-    print("limit = %d"%(i), c)
+    print(f'{i} ==>', c)
 
 
 # import math
