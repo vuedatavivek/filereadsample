@@ -19,9 +19,11 @@ def fib_generator(limit):
         return output
 # Driver Program
 limit = int(input("Enter the limit\n"))
-for i in range(0, limit + 1):
-    c = fib_generator(i)
-    print(f'{i} ==>', c)
+c = fib_generator(limit)
+print(c)
+# for i in range(0, limit + 1):
+#     c = fib_generator(i)
+#     print(f'{i} ==>', c)
 
 
 # import math
